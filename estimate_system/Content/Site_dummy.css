@@ -1,0 +1,2065 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+/** {
+    margin: 0;
+    padding: 0;
+}*/
+
+table, img, p {
+    border: 0;
+}
+
+/*OK*/
+body {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #555555;
+    font-size: 12px;
+    line-height: 150%;
+}
+
+/*OK*/
+.container {
+    margin-right: auto;
+    margin-left: 0px;
+}
+
+.card-content {
+    position: center;
+    /*[上][右][下][左]*/
+    padding: 15px;
+
+    margin: 70px auto 0 auto; /*20200303*/
+}
+
+.clfx {
+    height: 37px;
+}
+
+li {
+    list-style-type: none;
+}
+
+select {
+    border: solid 1px #ccc;
+}
+
+.picture {
+    border: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+a {
+    color: #004EA1;
+    text-decoration: none;
+}
+
+a:link {
+    color: #004EA1;
+}
+
+a:visited {
+    color: #004EA1;
+}
+
+a:hover {
+    color: #004EA1;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+/* Responsive: Portrait tablets and up */
+/*@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}*/
+
+/*OK*/
+.admin_page_ttl {
+    font-weight: bold;
+    font-size: 130%;
+    color: #333;
+    padding: 3px 0 3px 8px;
+    margin: 0 0 15px 0;
+    border-left: 4px solid #7E9DE5;
+    border-bottom: 1px solid #004EA1;
+}
+
+/* ヘッダー
+------------------------------------------------ */
+/*OK*/
+/*20200228 EDIT*/
+.master-header {
+    background-color: deepskyblue;
+
+    height: 50px;   /*20200303*/
+
+    /*width: 1410px;*/   /*20200303*/
+    margin: 0px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #004EA1;
+
+    position: fixed; /* ヘッダーを固定(これが重要) 20200303*/
+
+    top: 0; /* 固定する位置 */
+    left: 0; /* 固定する位置 */
+    right: 0; /* 固定する位置 */
+    z-index: 5;
+}
+
+/*OK*/
+.login_user_block {
+    float: right;
+    text-align: right;
+}
+
+/*既存　未使用*/
+/*div#admin_header {
+    width: 1880px;
+    margin: 0 auto;
+    padding: 12px 0 5px;
+    border-bottom: 1px solid #000;
+}*/
+
+a {
+    display: block;
+}
+
+/*未使用*/
+.head_logo {
+    font-size: 220%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #004EA1;
+    float: left;
+}
+
+/*未使用*/
+.login_user {
+    font-weight: bold;
+}
+
+/*未使用*/
+a.head_logout {
+    font-weight: bold;
+    width: 90px;
+    padding: 3px 0;
+    line-height: 50%;
+    text-align: center;
+    border: 1px solid #000;
+    color: #000;
+    background-color: #EFEFEF;
+}
+
+    a.head_logout:link, a.head_logout:visited {
+        color: #000;
+        background-color: #EFEFEF;
+    }
+
+    a.head_logout:hover {
+        color: #FFF;
+        background-color: #666;
+    }
+
+
+/* 管理画面メインコンテンツ
+------------------------------------------------ */
+/*OK*/
+.admin_main_contents {
+    width: 1880px;
+    /*margin: 15px auto 0 auto;*/
+    margin: 70px auto 0 auto; /*20200303*/
+}
+
+/* 一覧ページ用
+------------------------------------------------ */
+/*OK*/
+.estimate_system_list {
+    width: 1410px;
+}
+
+/*OK*/
+.top_button_area p {
+    float: left;
+    margin: 0 8px 0 0;
+}
+
+.top_button_area input {
+    font-weight: bold;
+    padding: 3px 10px;
+    font-size: 120%;
+}
+
+/*OK*/
+.top_button_area a {
+    font-weight: bold;
+    padding: 3px 10px;
+    font-size: 120%;
+}
+
+/*OK*/
+.search_area {
+    width: 1232px;
+    margin: 20px 0 0 0;
+    padding: 10px 10px;
+    /*padding: 10px 20px;*/
+    border: 4px double #999;
+    background-color: #EEFFFF;
+    /*height: 470px;*/
+}
+
+/*OK*/
+.search_ttl {
+    font-weight: bold;
+    font-size: 130%;
+}
+
+/*.search_item {
+    width: 1232px;
+}*/
+
+/*OK*/
+.search_item_right {
+    text-align: right;
+    padding: 5px;
+}
+
+.search_item {
+    padding: 5px;
+}
+
+.search_item_ricoh_area_top {
+    padding: 5px 5px 15px;
+}
+
+.search_item_ricoh_area_btm {
+    border-top: 1px solid #999;
+    padding: 15px 5px 5px;
+}
+
+.min_comment {
+    color: #3366FF;
+}
+
+.search_item input[type='text'] {
+    border: 1px solid #666;
+    padding: 3px 5px;
+}
+
+#txtCheckNum {
+    ime-mode: disabled;
+    width: 100px;
+}
+
+/*ADD 20200220 Chrome & Firefoxで動作*/
+/*日付labelタグ*/
+.date-edit {
+    position: relative;
+}
+/*日付ボタン部分*/
+.date-edit::before {
+    /*background: url(../img/now.png) no-repeat center center / cover #F7D94C;
+    border: solid 5px #cdcdcd;
+    content: "";*/
+    position: absolute;
+    top: -15px;
+    right: -65px;
+    border-radius: 28px;
+    height: 50px;
+    width: 50px;
+}
+/*日付ボックス部分*/
+input[type="date"] {
+    /*padding: 10px;*/
+    text-align: center;
+}
+/* ADD 20200227 日付ボックスの▲▼ボタンを無効*/
+input[type="date"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/*日付ボックスの×ボタンを無効*/
+/*input[type="date"]::-webkit-clear-button {
+    -webkit-appearance: none;
+}*/
+/*日付カレンダー表示用透明ボタン部分*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+}
+
+
+/*.date_box {
+    width: 90px;
+    ime-mode: disabled;
+}*/
+
+/*#CustomerCode {
+        ime-mode: disabled;
+        width: 80px;
+    }
+
+#SalesPerson {
+        ime-mode: active;
+        width: 80px;
+    }
+
+#DevSupPerson {
+        ime-mode: active;
+        width: 80px;
+    }*/
+
+/*.SearchName,
+    .SearchTitle,
+    .SearchMemo,
+    .EndUserName,
+    .GroupName {
+        ime-mode: active;
+        width: 300px;
+    }
+
+    .ProductCode {
+        width: 150px;
+        ime-mode: disabled;
+    }
+
+    .CreatePerson {
+        ime-mode: active;
+        width: 80px;
+    }
+
+    .ConclusionStatus {
+        width: 120px;
+        border: 1px solid #000;
+        padding: 3px;
+    }*/
+
+/*div#estimate_system_list #ContinuationFlag,
+    div#estimate_system_list #ProjectFlag {
+        width: 140px;
+        border: 1px solid #000;
+        padding: 3px;
+    }
+
+    div#estimate_system_list #EndUserPref {
+        width: 110px;
+        border: 1px solid #666;
+        padding: 3px;
+    }
+
+    div#estimate_system_list #Quantity {
+        width: 60px;
+    }
+
+    div#estimate_system_list #QuantityMark {
+        width: 80px;
+        border: 1px solid #000;
+        padding: 3px;
+    }
+
+    div#estimate_system_list #GroupNo {
+        width: 100px;
+    }
+
+    div#estimate_system_list #KOSTL {
+        width: 180px;
+        border: 1px solid #000;
+        padding: 3px;
+    }*/
+
+/*OK*/
+.btn_area {
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+
+.search_btn {
+    font-weight: bold;
+    padding: 3px 10px;
+    font-size: 120%;
+    /*color: #00F;*/
+}
+
+
+/*OK*/
+.search_result {
+    /*width: 1280px;*/
+    width: 1232px;
+    margin: 20px 0 0 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #999;
+}
+
+/*OK*/
+.result_left {
+    float: left;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+/*OK*/
+.result_right {
+    float: right;
+    height: 19px;
+    /*margin-left: 440px;*/
+}
+
+/*OK*/
+.result_table {
+    width: 1410px;
+    margin: 15px 0 0 0;
+}
+
+.result_table th {
+    line-height: 130%;
+    border: 1px solid #999;
+    padding: 3px 0;
+    background-color: #666;
+    color: #FFF;
+}
+
+.result_table td {
+    line-height: 130%;
+    border: 1px solid #999;
+    padding: 3px 5px;
+}
+
+tr.zebra_line {
+    background-color: #EEE;
+}
+
+.td_num {
+    padding: 3px 0;
+    text-align: center;
+}
+
+.td_btn {
+    padding: 3px 0;
+    text-align: center;
+}
+
+.input {
+    width: 50px;
+}
+
+.rcode {
+    color: #F00;
+}
+
+.ConcSt {
+    cursor: pointer;
+}
+
+.exe_color {
+    color: #090;
+}
+
+.noexe_color {
+    color: #CCC;
+}
+
+.no_result {
+    width: 1276px;
+    border: 2px solid #E00;
+    margin: 15px 0 0 0;
+    color: #E00;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    background-color: #FDD;
+}
+
+.csvdown {
+    /*width: 1278px;*/
+    width: 1232px;
+    border: 1px solid #666;
+
+    /*20200304*/
+    /*margin: 30px 0 0 0;*/
+    margin: 30px 0 50px 0;
+
+    text-align: center;
+    background-color: #DDD;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.csvdown a {
+    display: block;
+}
+
+/* 詳細ページ用
+------------------------------------------------ */
+/*20200305 EDIT*/
+
+/*20200306 EDIT estimate_system_detailをestimate_detail_mainとestimate_detail_productに変更*/
+
+/*.estimate_system_detail {*/
+#estimate_detail_main {
+    width: 1880px;
+    padding: 0 0 80px 0;
+    margin: 70px auto 0 auto; /*20200306*/
+}
+
+    div#estimate_detail_main .test {
+        display: none;
+    }
+
+    /*20200306 ADD*/
+    div#estimate_detail_main input[type='button'] {
+        padding: 2px 5px;
+        /*font-size: 120%;*/
+    }
+
+    div#estimate_detail_main input[type='text'] {
+        border: 1px solid #666;
+        padding: 2px 5px;
+        background-color: #FFF;
+    }
+
+    div#estimate_detail_main input[type='number'] {
+        border: 1px solid #666;
+        padding: 2px 0 2px 5px;
+        background-color: #FFF;
+    }
+
+    div#estimate_detail_main .conclusion_area {
+        text-align: right;
+        width: 980px;
+    }
+
+        div#estimate_detail_main .conclusion_area input {
+            width: 100px;
+            padding: 5px 0;
+            color: #AAA;
+        }
+
+
+/*20200306 EDIT*/
+
+    div#estimate_detail_main .conclusion_area input.status_select {
+        color: #000;
+        font-weight: bold;
+    }
+
+    div#estimate_detail_main .index_data {
+        width: 980px;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_detail_main .index_data th {
+            text-align: right;
+            padding: 3px 5px;
+            vertical-align: top;
+        }
+
+        div#estimate_detail_main .index_data td {
+            padding: 3px 5px;
+            vertical-align: top;
+        }
+
+    div#estimate_detail_main #CreatePersonName {
+        width: 100px;
+    }
+
+    div#estimate_detail_main #CheckNum {
+        width: 100px;
+    }
+
+
+
+    div#estimate_detail_product .section_ttl {
+        margin: 20px 0 0 0;
+        font-weight: bold;
+        font-size: 130%;
+    }
+
+    div#estimate_detail_product .customer_data {
+        border: 1px solid #999;
+        padding: 0 0 5px 0;
+        width: 980px;
+    }
+
+    div#estimate_detail_product .customer_data_table {
+        width: 100%;
+    }
+
+    div#estimate_detail_product .search_icon {
+        border: 1px solid #999;
+        padding: 1px;
+    }
+
+    div#estimate_detail_product .customer_data_table th {
+        text-align: left;
+        padding: 5px 10px 0 10px;
+    }
+
+    div#estimate_detail_product .customer_data_table td {
+        padding: 5px 10px 0 10px;
+    }
+
+    div#estimate_detail_product #CustomerCode {
+        width: 100px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #CustomerName {
+        width: 350px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #CustomerDivision {
+        width: 350px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #CustomerPersonName {
+        width: 350px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product .customer_data_table2 {
+        border-top: 1px solid #999;
+        margin: 5px 0 0 0;
+        width: 100%;
+    }
+
+        div#estimate_detail_product .customer_data_table2 th {
+            text-align: left;
+            padding: 5px 10px 0 10px;
+        }
+
+        div#estimate_detail_product .customer_data_table2 td {
+            padding: 5px 10px 0 10px;
+        }
+
+    div#estimate_detail_product #SalesPersonCode {
+        width: 70px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #SalesPersonName {
+        width: 100px;
+    }
+
+    div#estimate_detail_product #AssistantCode {
+        width: 70px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #AssistantName {
+        width: 100px;
+    }
+
+    div#estimate_detail_product #Tel {
+        width: 120px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #Fax {
+        width: 120px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product .head_data {
+        border: 1px solid #999;
+        padding: 0 0 5px 0;
+        width: 980px;
+    }
+
+    div#estimate_detail_product .project_data {
+        background-color: #EFE;
+    }
+
+    div#estimate_detail_product .head_data_table {
+        width: 100%;
+    }
+
+        div#estimate_detail_product .head_data_table th {
+            text-align: left;
+            padding: 5px 10px 0 10px;
+        }
+
+        div#estimate_detail_product .head_data_table td {
+            padding: 5px 10px 0 10px;
+        }
+
+        div#estimate_detail_product .head_data_table tr.tr_sep td,
+        div#estimate_detail_product .head_data_table tr.tr_sep th {
+            border-top: 1px dotted #999;
+            padding: 10px 10px 0 10px;
+        }
+
+        div#estimate_detail_product .head_data_table td.btn_area {
+            padding: 10px 20px 0 10px;
+            text-align: right;
+        }
+
+            div#estimate_detail_product .head_data_table td.btn_area input {
+                padding: 2px 0;
+                width: 380px;
+            }
+
+    div#estimate_detail_product .head_data_table2 {
+        width: 100%;
+    }
+
+        div#estimate_detail_product .head_data_table2 th {
+            text-align: left;
+            padding: 5px 10px 0 10px;
+            vertical-align: top;
+        }
+
+        div#estimate_detail_product .head_data_table2 td {
+            padding: 5px 10px 0 10px;
+            vertical-align: top;
+        }
+
+    div#estimate_detail_product #Title {
+        width: 340px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #PackingFare {
+        width: 240px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #DeliveryLimit {
+        width: 340px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #DeliverySchedule {
+        width: 340px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #DeliveryPlace {
+        width: 340px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #EstimateLimit {
+        width: 80px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #EstimateLimitDisp {
+        width: 150px;
+    }
+
+    div#estimate_detail_product #ConclusionDate {
+        width: 340px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #DatePickBox1 {
+        width: 100px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #DatePickBox2 {
+        width: 100px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #EndUserName {
+        width: 340px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product #ReplyDate {
+        width: 100px;
+    }
+
+    div#estimate_detail_product #Other {
+        width: 835px;
+        height: 70px;
+        border: 1px solid #666;
+        padding: 3px;
+        font-size: 100%;
+    }
+
+    div#estimate_detail_product #Contents {
+        width: 700px;
+        height: 70px;
+        border: 1px solid #666;
+        padding: 3px;
+        font-size: 100%;
+    }
+
+    div#estimate_detail_product #SalesMemo {
+        width: 835px;
+        height: 70px;
+        border: 1px solid #666;
+        padding: 3px;
+        font-size: 100%;
+    }
+
+    div#estimate_detail_product #FixMailBody {
+        width: 835px;
+        height: 50px;
+        border: 1px solid #666;
+        padding: 3px;
+        font-size: 100%;
+    }
+
+    div#estimate_detail_product #ProfessionClass2 {
+        width: 180px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #EndUserPref {
+        width: 110px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #EndUserAddress {
+        width: 200px;
+    }
+
+    div#estimate_detail_product #ContinuationFlag {
+        width: 110px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #ContinuationCycle {
+        width: 60px;
+    }
+
+    div#estimate_detail_product #ContinuationAlertY {
+        width: 50px;
+    }
+
+    div#estimate_detail_product #ContinuationAlertM {
+        width: 30px;
+    }
+
+    div#estimate_detail_product #ContinuationAlertD {
+        width: 30px;
+    }
+
+    div#estimate_detail_product #GroupNo {
+        width: 150px;
+        background-color: #EEE;
+    }
+
+    div#estimate_detail_product #GroupTitle {
+        width: 500px;
+        background-color: #EEE;
+    }
+
+    div#estimate_detail_product #GroupLeader {
+        width: 150px;
+        background-color: #EEE;
+    }
+
+    div#estimate_detail_product #DeliveryTel {
+        width: 120px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #DeliveryFloor {
+        width: 120px;
+    }
+
+    div#estimate_detail_product #ElevatorFlag {
+        width: 60px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #DatePickBox3,
+    div#estimate_detail_product #DatePickBox4,
+    div#estimate_detail_product #DatePickBox5 {
+        width: 100px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product #BuildInstallation {
+        width: 100px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #BuildTrader {
+        width: 150px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #BuildTraderOther {
+        width: 150px;
+    }
+
+    div#estimate_detail_product #DeliveryMethod {
+        width: 100px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product #DeliveryMethodPeriod {
+        width: 100px;
+    }
+
+    div#estimate_detail_product #DeliveryMethodTimes {
+        width: 100px;
+    }
+
+    div#estimate_detail_product #DocumentAbsence {
+        width: 60px;
+        border: 1px solid #666;
+        padding: 1px 3px;
+    }
+
+    div#estimate_detail_product .head_data_table2 td.td_notice {
+        font-size: 90%;
+        padding: 0;
+    }
+
+    div#estimate_detail_product .head_data_table2 td.cont_btn_area {
+        padding: 5px 20px 0 0;
+        text-align: right;
+    }
+
+        div#estimate_detail_product .head_data_table2 td.cont_btn_area input {
+            padding: 2px 0;
+            width: 150px;
+        }
+
+    div#estimate_detail_product .head_data_table2 td.td_group_btn {
+        text-align: right;
+        vertical-align: bottom;
+        padding: 5px 20px 0 10px;
+        color: #F00;
+    }
+
+        div#estimate_detail_product .head_data_table2 td.td_group_btn input {
+            width: 130px;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        /*20200306 EDIT*/
+div#estimate_detail_main .head_data_table2 td.td_project_save {
+    text-align: right;
+    vertical-align: bottom;
+}
+
+    div#estimate_detail_product .body_data {
+        margin-bottom: 20px;
+    }
+
+    div#estimate_detail_product .body_data_table1 {
+        width: 100%;
+    }
+
+        div#estimate_detail_product .body_data_table1 td {
+            padding: 5px 0 0 0;
+        }
+
+    div#estimate_detail_product #TotalPrice {
+        width: 120px;
+        ime-mode: disabled;
+        text-align: right;
+    }
+
+    div#estimate_detail_product .body_data_table2 {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+        div#estimate_detail_product .body_data_table2 th {
+            border: 1px solid #999;
+            line-height: 120%;
+            padding: 3px 0;
+            background-color: #EEE;
+        }
+
+            div#estimate_detail_product .body_data_table2 th.th_project {
+                background-color: #9C9;
+            }
+
+                div#estimate_detail_product .body_data_table2 th.th_project input {
+                    font-size: 80%;
+                    padding: 3px 0;
+                }
+
+            div#estimate_detail_product .body_data_table2 th label {
+                font-size: 90%;
+                font-weight: normal;
+            }
+
+        div#estimate_detail_product .body_data_table2 td {
+            border: 1px solid #999;
+            padding: 3px 0;
+            text-align: center;
+        }
+
+        div#estimate_detail_product .body_data_table2 tr.tr_delete td {
+            background-color: #AAA;
+        }
+
+        div#estimate_detail_product .body_data_table2 td.td_project {
+            background-color: #EFE;
+        }
+
+        div#estimate_detail_product .body_data_table2 .tr_no_disp {
+            display: none;
+        }
+
+    div#estimate_detail_product #DetailAddBtn {
+        margin-top: 10px;
+    }
+
+        div#estimate_detail_product #DetailAddBtn input {
+            width: 100px;
+            padding: 5px 0;
+        }
+
+    div#estimate_detail_product .LineClear {
+        width: 27px;
+    }
+
+    div#estimate_detail_product input[type='text'].ColumnNo {
+        width: 30px;
+        text-align: center;
+        padding: 2px 0;
+        ime-mode: disabled;
+    }
+
+    div#estimate_detail_product .ProductCode {
+        width: 160px;
+        ime-mode: inactive;
+    }
+
+    div#estimate_detail_product .ProductCode2 {
+        width: 130px;
+        ime-mode: inactive;
+    }
+
+    div#estimate_detail_product .ProductCode3 {
+        width: 110px;
+        ime-mode: inactive;
+    }
+
+    div#estimate_detail_product .NoDisp {
+        display: none;
+    }
+
+    div#estimate_detail_product .ProductName {
+        width: 150px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product .PriceBox {
+        width: 55px;
+        ime-mode: disabled;
+        text-align: right;
+    }
+
+    div#estimate_detail_product .LimitBox {
+        width: 55px;
+        ime-mode: disabled;
+        text-align: right;
+        color: #F00;
+    }
+
+    div#estimate_detail_product .CommentBox {
+        width: 135px;
+        ime-mode: active;
+    }
+
+    div#estimate_detail_product .AmountBox {
+        width: 45px;
+        ime-mode: disabled;
+        text-align: right;
+    }
+
+    div#estimate_detail_product .PercentBox {
+        width: 40px;
+        ime-mode: disabled;
+        text-align: right;
+    }
+
+    div#estimate_detail_product .TextBox1 {
+        width: 150px;
+        height: 55px;
+        ime-mode: active;
+        border: 1px solid #000;
+        padding: 3px;
+    }
+
+    div#estimate_detail_product .TextBox2 {
+        width: 250px;
+        height: 25px;
+        ime-mode: active;
+        border: 1px solid #000;
+        padding: 3px;
+    }
+
+    div#estimate_detail_product .ProductNotice {
+        font-weight: bold;
+        color: #F00;
+    }
+
+    div#estimate_detail_product .con_btn {
+        width: 60px;
+    }
+
+    div#estimate_detail_product .body_data_table2 td.td_total {
+        font-weight: bold;
+        text-align: right;
+        padding: 0 10px 0 0;
+        font-size: 130%;
+    }
+
+    div#estimate_detail_product .detail_btn {
+        position: fixed;
+        right: 0;
+        bottom: 20px;
+        /*top: 60px;*/
+        padding: 10px 20px 10px 10px;
+        border-top: 1px solid #999;
+        border-left: 1px solid #999;
+        /*border: 1px solid #999;*/
+        background-color: #EEE;
+    }
+
+    div#estimate_detail_product .button_area {
+        text-align: right;
+    }
+
+    div#estimate_detail_product .mail_area {
+        text-align: right;
+        margin: 15px 0 0 0;
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    div#estimate_detail_product .mail_area2 {
+        text-align: right;
+        margin: 5px 0 0 0;
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    div#estimate_detail_product .mail_notice {
+        text-align: right;
+        margin: 5px 0 0 0;
+        font-size: 120%;
+        color: #F00;
+    }
+
+    div#estimate_detail_product .copy_btn {
+        font-weight: bold;
+        font-size: 130%;
+        padding: 5px;
+        color: #3A3;
+    }
+
+    div#estimate_detail_product .issue_btn {
+        font-weight: bold;
+        font-size: 130%;
+        padding: 5px;
+        color: #A33;
+    }
+
+    div#estimate_detail_product .bill_btn {
+        padding: 2px 5px;
+        color: #F00;
+        font-size: 90%;
+    }
+
+    div#estimate_detail_product .save_btn {
+        font-weight: bold;
+        font-size: 130%;
+        padding: 5px;
+        color: #33A;
+    }
+
+    div#estimate_detail_product .prj_save_btn {
+        background-color: #99CC99;
+        border: 1px solid #669966;
+        font-weight: bold;
+        font-size: 130%;
+        padding: 5px;
+        color: #33A;
+    }
+
+        div#estimate_detail_product .prj_save_btn:hover {
+            border: 1px solid #336633;
+        }
+
+    div#estimate_detail_product .InventoryArea {
+        text-align: left;
+        padding: 0 0 0 5px;
+    }
+
+    div#estimate_detail_product .InventoryLayer {
+        /*width: 380px;*/
+        width: 415px;
+        padding: 10px 15px;
+        border: 2px solid #333;
+        position: absolute;
+        background-color: #FFF;
+        z-index: 1;
+        display: none;
+        text-align: left;
+    }
+
+    div#estimate_detail_product .layer_ttl {
+        margin: 15px 0 0 0;
+        font-weight: bold;
+    }
+
+    div#estimate_detail_product .layer_tbl1 {
+        /*width: 380px;*/
+        width: 380px;
+    }
+
+        div#estimate_detail_product .layer_tbl1 th {
+            width: 16%;
+        }
+
+            div#estimate_detail_product .layer_tbl1 th:first-child {
+                width: 20%;
+            }
+
+    div#estimate_detail_product .layer_tbl2 {
+        width: 300px;
+    }
+
+    div#estimate_detail_product .big_charge {
+        margin: 10px 0 0 0;
+        color: #F00;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    div#estimate_detail_product .close_btn {
+        text-align: right;
+        font-weight: bold;
+        margin: 10px 0 0 0;
+    }
+
+    div#estimate_detail_product .InventoryLayer table th {
+        text-align: center;
+    }
+
+    div#estimate_detail_product ul.not_completed_reason {
+        text-align: left;
+        margin-left: 1em;
+    }
+
+        div#estimate_detail_product ul.not_completed_reason li {
+            display: inline-block;
+            margin-right: 1em;
+        }
+
+/*20200228 ADD*/
+/* コメントレイヤー用 */
+a#SaveProductCommentBtn {
+    display: block;
+    /*position: fixed;*/
+    z-index: 3;
+    right: 0;
+    top: 0;
+    font-size: 90%;
+    background-color: #666;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 3px 5px;
+    color: #FFF;
+}
+
+div#SaveProductCommentArea {
+    width: 250px;
+    margin-top: 50px;
+    padding: 0 10px 20px 10px;
+    position: absolute;
+    background-color: #FFF;
+    z-index: 2;
+    display: none;
+    right: 0;
+    top: 0;
+    border-top: 3px double #333;
+    border-left: 3px double #333;
+    border-bottom: 3px double #333;
+}
+
+    div#SaveProductCommentArea .comment_ttl {
+        margin: 20px 0 5px 0;
+        padding: 0 0 5px 0;
+        border-bottom: 1px solid #333;
+    }
+
+
+/* 依頼一覧ページ用
+------------------------------------------------ */
+div#estimate_system_rlist {
+    width: 775px;
+    float: left;
+}
+
+    div#estimate_system_rlist table {
+        width: 775px;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_system_rlist table th {
+            border: 1px solid #999;
+            line-height: 130%;
+            padding: 2px 0;
+            background-color: #777;
+            color: #FFF;
+        }
+
+        div#estimate_system_rlist table td {
+            border: 1px solid #999;
+            line-height: 130%;
+            padding: 2px 5px;
+        }
+
+            div#estimate_system_rlist table td.t_center {
+                text-align: center;
+                padding: 2px 0;
+            }
+
+    div#estimate_system_rlist .rbtn {
+        font-weight: bold;
+        color: #00F;
+    }
+
+    div#estimate_system_rlist .dbtn {
+        font-weight: bold;
+        color: #D00;
+    }
+
+    div#estimate_system_rlist .comp {
+        font-weight: bold;
+    }
+
+
+/* 得意先検索
+------------------------------------------------ */
+div#estimate_system_customer_search {
+    width: 780px;
+    margin: 0 auto;
+    padding: 10px 0 30px;
+}
+
+    div#estimate_system_customer_search table.search_tbl {
+        width: 780px;
+        border: 3px double #000;
+        background-color: #DDF;
+    }
+
+        div#estimate_system_customer_search table.search_tbl th {
+            padding: 10px 10px 0 10px;
+            text-align: right;
+        }
+
+        div#estimate_system_customer_search table.search_tbl td {
+            padding: 10px 0 0 0;
+        }
+
+            div#estimate_system_customer_search table.search_tbl td.btn_area {
+                padding: 15px 0 10px 0;
+                text-align: center;
+            }
+
+                div#estimate_system_customer_search table.search_tbl td.btn_area input {
+                    font-weight: bold;
+                    color: #00F;
+                    padding: 3px 0;
+                    width: 80px;
+                    font-size: 120%;
+                }
+
+    div#estimate_system_customer_search #Code {
+        border: 1px solid #000;
+        padding: 3px 5px;
+        ime-mode: disabled;
+        width: 90px;
+    }
+
+    div#estimate_system_customer_search #Name {
+        border: 1px solid #000;
+        padding: 3px 5px;
+        ime-mode: active;
+        width: 180px;
+    }
+
+    div#estimate_system_customer_search #Index {
+        border: 1px solid #000;
+        padding: 3px 5px;
+        ime-mode: active;
+        width: 110px;
+    }
+
+    div#estimate_system_customer_search #Tel {
+        border: 1px solid #000;
+        padding: 3px 5px;
+        ime-mode: disabled;
+        width: 100px;
+    }
+
+    div#estimate_system_customer_search .nodata {
+        margin: 15px 0 0 0;
+        font-weight: bold;
+        color: #F00;
+        text-align: center;
+        border: 2px solid #F00;
+        padding: 15px 0;
+    }
+
+    div#estimate_system_customer_search table.result_tbl {
+        width: 780px;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_system_customer_search table.result_tbl th {
+            border: 1px solid #000;
+            background-color: #666;
+            color: #FFF;
+            padding: 3px 0;
+        }
+
+        div#estimate_system_customer_search table.result_tbl td {
+            border: 1px solid #000;
+            padding: 3px 5px;
+        }
+
+            div#estimate_system_customer_search table.result_tbl td input {
+                width: 70px;
+                font-size: 120%;
+                padding: 1px 0;
+                color: #090;
+                font-weight: bold;
+            }
+
+    div#estimate_system_customer_search p.btn_area {
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+
+        div#estimate_system_customer_search p.btn_area input {
+            font-weight: bold;
+            padding: 3px 0;
+            width: 80px;
+            font-size: 120%;
+        }
+
+
+/* 商品一括入力
+------------------------------------------------ */
+div#estimate_system_product_in {
+    width: 380px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
+
+    div#estimate_system_product_in textarea {
+        width: 370px;
+        padding: 5px 4px;
+        border: 1px solid #000;
+        height: 260px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_system_product_in .btn_area {
+        text-align: center;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_system_product_in .btn_area input {
+            width: 100px;
+            padding: 2px 0;
+        }
+
+    div#estimate_system_product_in .notice {
+        font-weight: bold;
+        color: #F00;
+    }
+
+
+/* データ出力
+------------------------------------------------ */
+div#estimate_system_product_out {
+    width: 380px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
+
+    div#estimate_system_product_out textarea {
+        width: 370px;
+        padding: 5px 4px;
+        border: 1px solid #000;
+        height: 260px;
+        ime-mode: disabled;
+    }
+
+    div#estimate_system_product_out .btn_area {
+        text-align: center;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_system_product_out .btn_area input {
+            width: 100px;
+            padding: 2px 0;
+        }
+
+
+/* ログインID検索
+------------------------------------------------ */
+div#estimate_system_loginid_search {
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
+
+    div#estimate_system_loginid_search .result_area {
+        width: 598px;
+        height: 370px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border: 1px solid #000;
+    }
+
+    div#estimate_system_loginid_search .no_account {
+        font-weight: bold;
+        color: #F00;
+        font-size: 120%;
+        padding: 150px 0 0 0;
+        text-align: center;
+    }
+
+    div#estimate_system_loginid_search .result_area table {
+        width: 98%;
+        background-color: #DFD;
+    }
+
+        div#estimate_system_loginid_search .result_area table tr.zebra {
+            background-color: #DDF;
+        }
+
+        div#estimate_system_loginid_search .result_area table tr.select {
+            background-color: #A33;
+            color: #FFF;
+        }
+
+            div#estimate_system_loginid_search .result_area table tr.select a {
+                color: #FFF;
+            }
+
+        div#estimate_system_loginid_search .result_area table td {
+            padding: 5px;
+        }
+
+            div#estimate_system_loginid_search .result_area table td.center {
+                border-left: 1px solid #AAA;
+                border-right: 1px solid #AAA;
+            }
+
+            div#estimate_system_loginid_search .result_area table td input {
+                width: 60px;
+                padding: 3px 0;
+            }
+
+    div#estimate_system_loginid_search .notice {
+        text-align: right;
+        color: #F00;
+    }
+
+    div#estimate_system_loginid_search .btn_area {
+        text-align: center;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_system_loginid_search .btn_area input {
+            width: 100px;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+
+/* コメントテンプレート
+------------------------------------------------ */
+div#estimate_system_comment_template {
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px 0 30px 0;
+}
+
+    div#estimate_system_comment_template table.template_table {
+        width: 600px;
+    }
+
+        div#estimate_system_comment_template table.template_table th {
+            font-size: 120%;
+            text-align: left;
+            vertical-align: top;
+            padding: 0 0 0 10px;
+        }
+
+        div#estimate_system_comment_template table.template_table td {
+            padding: 0 0 10px 0;
+            text-align: center;
+        }
+
+    div#estimate_system_comment_template textarea {
+        width: 400px;
+        height: 50px;
+        border: 1px solid #000;
+        padding: 5px;
+    }
+
+    div#estimate_system_comment_template input {
+        width: 80px;
+        padding: 5px 0;
+    }
+
+    div#estimate_system_comment_template .save_btn {
+        margin: 5px 0 0 0;
+    }
+
+        div#estimate_system_comment_template .save_btn input {
+            color: #F00;
+            font-weight: bold;
+        }
+
+    div#estimate_system_comment_template .cls_btn {
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+
+        div#estimate_system_comment_template .cls_btn input {
+            font-weight: bold;
+        }
+
+
+/* グループ管理
+------------------------------------------------ */
+div#estimate_system_group_window {
+    width: 740px;
+    margin: 0 auto;
+    padding: 5px 0 30px 0;
+}
+
+    div#estimate_system_group_window input[type="text"] {
+        border: 1px solid #000;
+        padding: 3px;
+    }
+
+    div#estimate_system_group_window .box1 {
+        width: 120px;
+    }
+
+    div#estimate_system_group_window .box2 {
+        width: 240px;
+    }
+
+    div#estimate_system_group_window .box3 {
+        width: 550px;
+    }
+
+    div#estimate_system_group_window .box4 {
+        width: 50px;
+    }
+
+    div#estimate_system_group_window .box5 {
+        width: 30px;
+    }
+
+    div#estimate_system_group_window .btn1 {
+        width: 80px;
+        padding: 3px 0;
+    }
+
+    div#estimate_system_group_window .btn2 {
+        width: 180px;
+        padding: 3px 0;
+    }
+
+    div#estimate_system_group_window .btn3 {
+        width: 50px;
+        padding: 3px 0;
+    }
+
+    div#estimate_system_group_window .group_ttl {
+        font-weight: bold;
+        font-size: 130%;
+        padding: 5px;
+        background-color: #555;
+        color: #FFF;
+        margin: 0 0 10px 0;
+    }
+
+    div#estimate_system_group_window .new_group input {
+        width: 120px;
+        padding: 3px 0;
+    }
+
+    div#estimate_system_group_window .search_ttl {
+        width: calc(100% - 12px);
+        margin: 10px auto 0 auto;
+        font-weight: bold;
+        background-color: #888;
+        color: #FFF;
+        padding: 5px;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+    }
+
+    div#estimate_system_group_window .group_search_table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        div#estimate_system_group_window .group_search_table th {
+            border: 1px solid #000;
+            padding: 5px 0;
+            background-color: #DDD;
+        }
+
+        div#estimate_system_group_window .group_search_table td {
+            border: 1px solid #000;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+    div#estimate_system_group_window .group_result_table {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+        div#estimate_system_group_window .group_result_table th {
+            border: 1px solid #000;
+            padding: 5px 0;
+            background-color: #CCF;
+        }
+
+        div#estimate_system_group_window .group_result_table td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+            div#estimate_system_group_window .group_result_table td.td_nodata {
+                text-align: center;
+                padding: 30px 0;
+            }
+
+    div#estimate_system_group_window .group_table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        div#estimate_system_group_window .group_table th {
+            border: 1px solid #000;
+            padding: 5px 0;
+            background-color: #CCF;
+        }
+
+        div#estimate_system_group_window .group_table td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        div#estimate_system_group_window .group_table tr.tr_new td {
+            background-color: #DFD;
+        }
+
+        div#estimate_system_group_window .group_table tr.tr_leader td {
+            background-color: #FDD;
+        }
+
+    div#estimate_system_group_window .leader_flag {
+        font-weight: bold;
+        color: #F00;
+    }
+
+    div#estimate_system_group_window .no_disp {
+        display: none;
+    }
+
+    div#estimate_system_group_window .group_save {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+
+    div#estimate_system_group_window .group_notice {
+        text-align: center;
+        margin: 10px 0 0 0;
+        color: #F00;
+    }
+
+    div#estimate_system_group_window .group_table tr.tr_delete td {
+        background-color: #DDD;
+    }
+
+
+/* 回答ページ用
+------------------------------------------------ */
+div#estimate_system_check {
+    width: 1580px;
+
+    /*20200304*/
+    margin: 30px 0 50px 0;
+}
+
+    div#estimate_system_check input[type='text'] {
+        border: 1px solid #666;
+        padding: 2px 5px;
+        background-color: #FFF;
+    }
+
+    div#estimate_system_check .head_area {
+        margin: 0 0 10px 0;
+        font-size: 0;
+    }
+
+    div#estimate_system_check .back_btn {
+        display: inline-block;
+        width: calc(100% - 280px);
+        vertical-align: top;
+        font-size: 12px;
+    }
+
+        div#estimate_system_check .back_btn input {
+            width: 100px;
+        }
+
+    div#estimate_system_check .mail_area {
+        display: inline-block;
+        width: 280px;
+        vertical-align: top;
+    }
+
+        div#estimate_system_check .mail_area p {
+            display: inline-block;
+            /*width: 70px;*/
+            width: 120px;
+            height: 35px;
+            margin-left: 10px;
+            /*padding: 10px 9px 0 49px;*/
+            padding: 3px 9px 2px 49px;
+            vertical-align: top;
+            font-size: 12px;
+            line-height: 14px;
+            /*background: url("../Img/mail.png") 10px 12px no-repeat;*/
+            background: url("../Img/mail.png") 10px 5px no-repeat;
+            border: 1px solid #CCC;
+            color: #CCC;
+            background-color: #EEE;
+        }
+
+        div#estimate_system_check .mail_area p.mail_fix {
+            background-color: #FFF;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+    div#estimate_system_check .submit_fix {
+        font-size: 90%;
+        color: #F00;
+    }
+
+    div#estimate_system_check .info_table {
+        width: 100%;
+    }
+
+        div#estimate_system_check .info_table th {
+            border: 1px solid #000;
+            text-align: left;
+            font-weight: bold;
+            padding: 5px 0 5px 10px;
+            background-color: #DDD;
+        }
+
+        div#estimate_system_check .info_table td {
+            border: 1px solid #000;
+            padding: 5px 10px;
+        }
+
+        div#estimate_system_check .info_table td.td_checkno {
+            font-size: 130%;
+            font-weight: bold;
+        }
+
+        div#estimate_system_check .info_table td.td_top {
+            vertical-align: top;
+        }
+
+        div#estimate_system_check .info_table td.td_notice {
+            background-color: #D3FCFD;
+    }
+
+    div#estimate_system_check pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow: visible;
+        /*ADD*/
+        height: 130px; 
+        margin: 5px 0;
+    }
+
+    div#estimate_system_check .product_table {
+        width: 100%;
+    }
+
+        div#estimate_system_check .product_table th {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            text-align: center;
+            font-weight: bold;
+            padding: 5px 0;
+            background-color: #DDD;
+        }
+
+        div#estimate_system_check .product_table td {
+            border: 1px solid #000;
+            padding: 5px 10px;
+            text-align: right;
+        }
+
+        div#estimate_system_check .product_table td.td_left {
+            text-align: left;
+        }
+
+        div#estimate_system_check .product_table td.td_center {
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        div#estimate_system_check .product_table td.td_sku {
+            text-align: left;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        div#estimate_system_check .product_table td.td_sku input {
+            font-size: 80%;
+            width: 100px;
+            padding: 2px 0;
+        }
+
+        div#estimate_system_check .product_table td.td_sku p:first-child {
+            margin-bottom: 5px;
+        }
+
+        div#estimate_system_check .product_table td.td_quantity {
+            font-weight: bold;
+        }
+
+        div#estimate_system_check .product_table td input[readonly] {
+            background-color: #EEE;
+        }
+
+    div#estimate_system_check .price_box {
+        width: 60px;
+        ime-mode: disabled;
+        text-align: right;
+    }
+
+    div#estimate_system_check .percent_box {
+        width: 45px;
+        ime-mode: disabled;
+        text-align: right;
+    }
+
+    div#estimate_system_check textarea {
+        width: calc(100% - 20px);
+        height: 30px;
+        ime-mode: active;
+        border: 1px solid #000;
+        padding: 3px;
+    }
+
+    div#estimate_system_check .btn_area {
+        text-align: center;
+        margin: 15px 0 0 0;
+    }
+
+        div#estimate_system_check .btn_area input {
+            width: 150px;
+            font-size: 120%;
+            font-weight: bold;
+            padding: 5px 0;
+        }
+
+/* フッター
+------------------------------------------------ */
+/*20200303*/
+.master-footer {
+    text-align: center;
+    /*background-color: #228822;*/
+    border: 1px solid #555555;
+    font-size: small;
+    position: fixed;
+    right: 10px; /* 固定する位置 */
+    bottom: 0; /* 固定する位置 */
+    left: 10px; /* 固定する位置 */
+    width: 100%;
+    height: 20px;
+    /*color: white;*/
+    margin: 0 auto 20px;
+}
+
+/*---------------------------
+フロート解除
+---------------------------*/
+/* for modern brouser */
+.clfx:after {
+    /*content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    max-height: 0;
+    visibility: hidden;*/
+}
+/* ie7,macIE5 */
+.clfx {
+    display: inline-block;
+}
+/* winIE6 below, exclude macIE5 \*/
+* html .clfx {
+    height: 1%;
+}
+
+.clfx {
+    display: block;
+}

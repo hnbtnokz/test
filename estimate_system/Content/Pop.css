@@ -1,0 +1,155 @@
+﻿/*jQuery UI ダイアログの背景色を変更する*/
+.ui-widget-overlay {
+    background: rgba(0, 0, 0, 0.5); /*chrome*/
+    /*background: #444444;
+    background: url(images/ui-bg_diagonals-thick_90_eeeeee_40x40.png) 50% 50% repeat;*/
+    /*background: #444444 url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;*/
+    background: #444444 url(images/ui-bg_diagonals-thick_90_eeeeee_40x40.png) 50% 50% repeat;
+
+    opacity: 0.9;
+    filter: Alpha(Opacity=30);
+}
+
+#dialog {
+    background-color: #f8f9fa;
+}
+/*https://programmercollege.jp/column/11135/*/
+
+/* bootstrap
+.modal-backdrop {
+    background-color: lightgray;
+    bottom: 0;
+}*/
+
+
+/* HTML5.2
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    padding: 20px;
+    background-color: #007bbb;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 10px;
+    margin: 20px 0 20px 20px;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border-left: 4px solid #007bbb;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+}
+
+    main p {
+        font-size: 16px;
+        line-height: 1.8em;
+        padding-left: 20px;
+        max-width: 500px;
+    }*/
+
+/*#dialog {
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 0;
+    padding: 0;
+}*/
+
+/*dialog + .backdrop {*/
+/*dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);*/ /*chrome*/
+    /*animation: modal-open .4s ease;
+}*/
+
+/*dialog[open] {
+    animation: modal-slide .5s ease;
+}*/
+
+/*.modal-header {
+    padding: 20px;
+    background-color: #007bbb;
+    color: #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-weight: bold;
+}
+
+.modal-contents {
+    padding: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.modal-footer {
+    padding: 20px;
+    color: #333;
+    font-weight: bold;
+}*/
+
+/*.open {
+    margin-top: 40px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #007bbb;
+    font-size: 14px;
+    border: 1px solid #007bbb;
+    color: #fff;
+    letter-spacing: .2px;
+    outline: none;
+    transition: background .2s ease, color .2s ease;
+}
+
+    .open:hover {
+        color: #007bbb;
+        background-color: transparent;
+    }
+
+.close {
+    color: #fff;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+@keyframes modal-open {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-slide {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mt20 {
+    margin-top: 20px;
+}*/

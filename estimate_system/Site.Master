@@ -1,0 +1,259 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="estimate_system.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head runat="server">
+
+<%--20200316 DELETE--%>
+<%--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>--%>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <%--    App_Start\BundleConfig.vbで設定--%>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <%--    bundle.configで設定--%>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+
+<%--20200309--%>
+<%--    <link rel="stylesheet" href="h ttp://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">--%>
+<%--    <link href="Content/jquery-ui.min.css" rel="stylesheet" />--%>
+<%--    <link rel="stylesheet" href="h ttp://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--%>
+<%--    <link rel="stylesheet" href="h ttps://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">--%>
+    <link href="Content/jquery-ui-smoothness.css" rel="stylesheet" />
+
+<%--    <link rel="stylesheet" href="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.default.min.css" />--%>
+
+<%--20200309 
+    <link rel="stylesheet" href="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/jquery.tablesorter.pager.min.css" />--%>
+<%--    <link href="Content/jquery.tablesorter.pager.css" rel="stylesheet" />--%>
+
+    <%--一覧の列入れ替え・ページングなど--%>
+    <%--20200220 使わないらしい
+    <link rel="stylesheet" href="h ttps://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <!-- それぞれのページで記述する -->
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+<script type="text/javascript" charset="utf-8">
+//初期表示は非表示
+//document.getElementById("logout").style.visibility = "hidden";  //visibility ="visible"
+//document.getElementById("logout").style.display = "none";  //display ="block"
+
+//body.onload = function () {
+//    // ここに読み込みが完了したら実行したい処理を記述する
+//}
+
+//// ログアウト操作 OK
+//function logout() {
+//    var mode = document.getElementById("admin_header_mode");
+//    mode.value = "logout";
+//    //document.form1.submit();
+//}
+function SessionError() {
+    window.confirm('セッションが切れました。');
+    if (document.location.pathname.split("/").pop() == "Index.aspx") {
+        location.href = "./Login.aspx";
+    } else {
+        location.href = "Login.aspx";
+    }
+    return false;
+}
+
+function CookieError() {
+    window.confirm('クッキー期限が切れました。');
+    if (document.location.pathname.split("/").pop() == "Index.aspx") {
+        location.href = "./Login.aspx";
+    } else {
+        location.href = "Login.aspx";
+    }
+    return false;
+}
+</script>
+
+    <%--20200401 edit 詳細画面へのテンプレートコメント挿入のため--%>
+<%--<form id="form1" runat="server">--%>
+    <form id="form1" name="form1" runat="server">
+        <%--レンダリング--%>
+        <asp:ScriptManager runat="server">
+
+<%--TODO:20200220--%>
+<%--すべての ASP.NET framework スクリプト要求を Microsoft Ajax CDN にリダイレクトします--%>
+            <%--<asp:ScriptManager runat="server" EnableScriptGlobalization="True" EnableCdn="true">--%>
+
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+
+<%-- TODO:20200309 変更必要
+StackPath CDN
+    src="h ttps://code.jquery.com/jquery-3.4.1.slim.js"
+:star: Google CDN :star:
+    src="h ttps://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+Mcrosoft CDN
+    src="h ttps://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"
+CDNJS CDN
+    src="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+jsDelivr CDN
+    src="h ttps://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"--%>
+
+
+<%--        <script src="Scripts/bootstrap.min.js"></script>--%>
+<%--        <script type="text/javascript" src="s://code.jquery.com/jquery-3.4.1.min.js"></script>--%>
+<%--20200303        <script type="text/javascript" src="s://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>--%>
+
+<%--20200309->20200326使用 test--%>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<%--<script src="Scripts/jquery-ui.min.js"></script>--%>
+
+
+<%--20200305 EDIT--%>
+        <%--<script src="Scripts/js.cookie.js"></script>--%><%--v2.2.0--%>
+
+<%--20200326使用 test--%>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><%--v3.14.1--%>
+<%--        <script src="Scripts/js.cookie.js"></script>--%><%--v2.2.1--%>
+
+        <%--※jquery.inview.min.js※「jquery」は3系、2系、では上手く動かない場合があるので1系。1.9.1以上であればBootstrap4.0.0でも問題ありません。--%>
+<%--20200310        <script src="h ttps://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>--%>
+
+<%--20200309
+        <script src="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>--%>
+<%--test        <script src="Scripts/jquery.inview.min.js"></script>--%>
+
+<%--                <script src="Scripts/datepicker-ja.js"></script>--%>
+
+        <%--<script src="Scripts/jquery.blockUI.js"></script>--%><%--v2.70.0-2014.11.23--%>
+<%--20200309
+        <script type="text/javascript" src="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0-2014.11.23/jquery.blockUI.min.js"></script>--%>
+<%--test        <script src="Scripts/jquery.blockUI.js"></script>--%>
+
+<%--20200305 EDIT--%>
+
+<%--                <script src="Scripts/jquery.datetimepicker.full.min.js"></script>--%>
+
+<%--20200309
+        <script type="text/javascript" src="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>--%>
+<%--test        <script src="Scripts/jquery.tablesorter.js"></script>--%>
+
+
+        <!-- 追加機能(widgets)を使用する場合は次も追加する -->
+<%--20200309
+        <script type="text/javascript" src="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.widgets.min.js"></script>-%>
+        
+<%--20200309
+        <script type="text/javascript" src="h ttps://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/extras/jquery.tablesorter.pager.min.js"></script>--%>
+<%--test        <script src="Scripts/jquery.tablesorter.pager.js"></script>--%>
+
+<%--20200309 MOVE--%>
+<%--        <script src="Scripts/Common.js?ver=<%= estimate_system.Common.Util.GetCashClearstr() %>"></script>--%>
+
+<%--20200220 使わないらしい
+        <script type="text/javascript" src="h ttps://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>--%>
+
+<%--
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">アプリケーション名</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">ホーム</a></li>
+                        <li><a runat="server" href="~/About">詳細</a></li>
+                        <li><a runat="server" href="~/Contact">問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+--%>
+        <%--<div class="container body-content">--%>
+        <div class="container">
+            <!-- ヘッダー -->
+
+            <%--EDIT 20200228--%>
+            <header class="master-header">
+
+            <div class="row">
+
+            <%--ss.sanwa.local/estimate_system/index.asp--%>
+
+            <%--エラー発生注意：1 つのページには、1 つのサーバー側 Form タグのみを指定できます。→つまりrunat="server"の複数記述不可--%>
+            <%--<form id="admin_header_form" action="Index.aspx">--%>
+
+            <asp:HiddenField ID="admin_header_mode" runat="server" Value="" ClientIDMode="Static" />
+
+            <div class="col-md-8">
+            <a href="Index.aspx">
+<%--20200303                <h1><asp:Label ID="lblHeadTitle" runat="server" Text=""></asp:Label></h1>--%>
+                <h4><asp:Label ID="lblHeadTitle" runat="server" Text=""></asp:Label></h4>
+            </a>
+            </div>
+
+            <div class="col-md-4 login_user_block">
+<%--20200303                <p>--%>
+                    <asp:Label ID="Label1" runat="server" Text="ログインユーザー："></asp:Label>
+                    <asp:Label ID="lblLoginName" runat="server" Text=""></asp:Label>
+<%--20200303                </p>--%>
+<%--                <a href="javascript: adminSubLogout();">ログアウト</a>--%>
+<%--                <asp:Button ID="BtnLogout" runat="server" Text="ログアウト" OnClick="BtnLogout_Click" onClientClick="confirm('ログアウトします。'); return false;" CssClass="btn btn-primary" />--%>
+<%--test:OK         <asp:Button ID="BtnLogout" runat="server" Text="<%= myLogout %>" OnClick="BtnLogout_Click"  onClientClick="logout()" CssClass="btn btn-primary" />--%>
+                    <asp:Button ID="BtnLogout" runat="server" Text="ログアウト" OnClick="BtnLogout_Click" CssClass="btn btn-sm btn-primary" UseSubmitBehavior="False" />
+
+            </div>
+
+            <%--</form>--%>
+
+            </div>
+            </header>
+
+            <asp:ContentPlaceHolder ID="body" runat="server">
+                <!-- それぞれのページで記述する -->
+            </asp:ContentPlaceHolder>
+
+            <%--20200303 EDIT--%>
+            <br>
+            <hr>
+            <br>
+            <!-- フッター -->
+            <footer>
+            <%--EDIT 20200228--%>
+                <p class="master-footer"><a href="AdbeRdr11010_ja_JP.exe">Adbe Reader download</a>&nbsp;&nbsp;&nbsp;&nbsp;見積案件システム v2.0 since 2020 produce by HanaSys.</p>
+            </footer>
+
+        </div>
+
+    </form>
+</body>
+</html>
